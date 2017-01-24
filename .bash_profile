@@ -65,7 +65,7 @@ RESET='\[\e[0m\]'
 ORANGE='\[\033[00m\]'
 
 # preferred terminal output:
-export PS1="$AQUA\w$PINK\$(parse_git_branch)$WHITE\$$RESET "
+export PS1="$AQUA\w$PINK\$(parse_git_branch)$ORANGE\$$WHITE "
 export CLICOLOR=2
 
 # lecture terminal output:
