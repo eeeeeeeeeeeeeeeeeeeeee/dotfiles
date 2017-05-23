@@ -19,8 +19,8 @@ let g:syntastic_mode_map = { 'mode': 'passive',
                             \ 'passive_filetypes': ['ruby', 'javascript'] }
 
 " bracket and parentheses formatter
-" Plugin 'Raimondi/delimitMate'
-" let delimitMate_expand_cr=1
+Plugin 'Raimondi/delimitMate'
+let delimitMate_expand_cr=1
 
 " status bar
 Plugin 'vim-airline/vim-airline'
@@ -44,8 +44,9 @@ Plugin 'mxw/vim-jsx'
 let g:jsx_ext_required = 0
 
 " Markdown
-" Plugin 'plasticboy/vim-markdown'
-" let g:vim_markdown_folding_disabled = 1
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+let g:vim_markdown_folding_disabled = 1
 
 " file manager
 Plugin 'scrooloose/nerdtree'
@@ -75,6 +76,9 @@ Plugin 'w0ng/vim-hybrid'
 " HTML
 Plugin 'mattn/emmet-vim'
 
+" Toggle Comments
+Plugin 'scrooloose/nerdcommenter'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -88,6 +92,8 @@ set tabstop=2
 set shiftwidth=2
 " On pressing tab, insert 2 spaces
 set expandtab
+" allow backspace behavior in edit mode
+set backspace=indent,eol,start
 
 " colorscheme
 set background=dark
@@ -108,6 +114,8 @@ command CT CommandT
 command SR SyntasticReset
 command SC SyntasticCheck
 command ER Errors
+map <C-\> :NERDTreeToggle<CR>
+map <C-/> <plug>NerdCommenterComment
 
 "terminal coloring
 set term=screen-256color

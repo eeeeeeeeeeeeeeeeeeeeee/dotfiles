@@ -6,12 +6,18 @@ export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
 # git aliases
 alias gcm="git commit -m"
-alias gco="git checkout"
 alias gaa="git add -A"
 alias gco="git checkout"
 alias gcob="git checkout -b"
+alias gb="git branch"
+alias gs="git status"
+alias gl="git log"
 
-# navigation aliases
+# navigation aliases (general)
+alias down="cd ~/Downloads"
+alias desk="cd ~/Desktop"
+
+# navigation aliases (app academy)
 alias aa="cd ~/Documents/app-academy"
 alias pt="cd ~/Documents/app-academy/progress-tracker"
 alias curr="cd ~/Documents/app-academy/curriculum"
@@ -33,6 +39,7 @@ alias bi="bundle install"
 
 # node aliases
 alias ni="npm install"
+alias nis="npm install --save"
 alias ww="webpack -w"
 
 # typo aliases
@@ -66,6 +73,7 @@ ORANGE='\[\033[00m\]'
 
 # preferred terminal output:
 export PS1="$AQUA\w$PINK\$(parse_git_branch)$ORANGE\$$WHITE "
+
 export CLICOLOR=2
 
 # lecture terminal output:
